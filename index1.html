@@ -1,0 +1,29 @@
+
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel= "stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $("button").click(function() {
+          $.get("cd_catalog.xml", function(data, status) {
+            $("#test").html (data);
+            alert(status);
+          }))
+        })
+      });
+
+
+    </script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <<button>Click me to get data!</button>
+    <p id="test"></p>
+
+  </body>
+</html>
